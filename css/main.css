@@ -1,0 +1,98 @@
+/* VARIABLE GLOBAL */
+/*font*/
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+a:active {
+  text-decoration: none;
+}
+
+body {
+  margin: 0px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* MIXIN*/
+/* button*/
+.btn-primary {
+  border-radius: 25px;
+  background: var(--button-gradient, linear-gradient(175deg, #9356DC 0%, #FF79DA 100%));
+  border: var(--button-gradient, linear-gradient(175deg, #9356DC 0%, #FF79DA 100%));
+  color: var(--white, #FFF);
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  padding: 13px 18px 13px 18px;
+}
+
+.btn-secondary {
+  border-radius: 20px;
+  background: #F6F6F6;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  height: 72.379px;
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  border: #F6F6F6;
+  width: 322.486px;
+  height: 72.379px;
+  padding-left: 33px;
+  display: flex;
+  align-items: center;
+  gap: 27px;
+  position: relative;
+}
+
+/* CSS START HERE */
+@media (max-width: 767.98px) {
+  footer {
+    background: #353535;
+    padding: 22px 25px 22px 25px;
+  }
+  footer h3 {
+    color: #FFF;
+    font-family: Shrikhand;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-bottom: 16px;
+  }
+  footer .footer__menu {
+    gap: 7px;
+  }
+  footer .footer__icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  footer p {
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding-right: 8px;
+  }
+}/*# sourceMappingURL=main.css.map */
