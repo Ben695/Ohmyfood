@@ -1,41 +1,60 @@
 @import ./_variables
-.menu__btn
-  background-color: transparent
-  border: none
-  padding: 0
-  font: inherit
-  cursor: pointer
-  position: absolute
-  top: 5%
-  right: 33%
-  svg
-    fill: white
-    stroke: black
-    stroke-width: 1px
-    width: 22px
-    height: 22px
-    &:active
-      fill: url(#bg__like)
-      stroke: url(#bg__like)
+.menu__card
+    border-radius: 15px
+    background: #FFF
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10)
+    margin-bottom: 12px
+    cursor: pointer
+    display: grid
+    grid-template-columns: 1fr 0
+    transition: all 500ms ease-in-out
+    &:hover
+        grid-template-columns: 1fr 59px
+    .menu__txt
+        padding: 15px
+        display: grid
+        grid-template-columns: 1fr 30px
+        align-items: flex-end
+        gap: 15px
+        .menu__card-title
+            overflow: hidden
+            text-overflow: ellipsis
+            white-space: nowrap
+            h4
+                overflow: hidden
+                color: #000
+                text-overflow: ellipsis
+                white-space: nowrap
+                font-size: 18px
+                font-weight: 500
+            h5
+                overflow: hidden
+                color: #000
+                text-overflow: ellipsis
+                white-space: nowrap
+                font-size: 15px
+                font-weight: 300
+        p
+            color: #353535
+            font-size: 15px
+            font-weight: 700
+    .menu__confirmation
+        display: flex
+        align-items: center
+        justify-content: center
+        background-color: #99E2D0
+        width: 100%
+        height: 100%
+        border-radius: 0 15px 15px 0
+        overflow: hidden
 /* Desktop version*/
 @media (min-width: 768px) 
     header
-        display: flex
-        padding: 30px 0px 31 0px
-        justify-content: center
-        align-items: center
-        align-self: stretch
-        position: relative
-        height: 96px
-        box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25)
         a
             position: absolute
             top: 35%
             left: 2%
         .header__logo
-            font-family: "Shrikhand", "cursive"
-            margin: 0
-            text-align: center
     .bg-img
         img
             width: 100%
@@ -62,27 +81,6 @@
                 line-height: normal
             i
                 font-size: 21px
-            /*.heart__icon
-                position: relative
-                display: flex
-                justify-content: center
-                align-items: center
-                padding-left: 24px
-                &--empty
-                    position: absolute
-                    color: black
-                &--full
-                    position: absolute
-                    opacity: 0
-                    background: linear-gradient(#FF79DA, #9356DC)
-                    background-clip: text
-                    -webkit-background-clip: text
-                    color: transparent
-                    transition: all 400ms
-                &:hover &--full
-                    opacity: 1
-                &:hover &--empty
-                    opacity: 0*/
         .menu__section
             padding-left: 210px
             padding-right: 211px
@@ -105,40 +103,7 @@
                 left: 0
                 width: 40px
                 height: 3px
-                background-color:#99E2D0
-        .menu__card
-            border-radius: 15.043px
-            background: #FFF
-            box-shadow: 0px 4.011494159698486px 15.043103218078613px 0px rgba(0, 0, 0, 0.10)
-            padding: 15px
-            margin-bottom: 12px
-            cursor: pointer
-            h4
-                overflow: hidden
-                color: #000
-                text-overflow: ellipsis
-                whitespace: nowrap
-                font-size: 18px
-                font-style: normal
-                font-weight: 500
-                line-height: normal
-            .menu__price
-                display: flex
-                align-items: center
-                justify-content: space-between
-                h4
-                    color: #000
-                    font-size: 15px
-                    font-style: normal
-                    font-weight: 300
-                    line-height: normal
-                p
-                    color: #353535
-                    text-align: center
-                    font-size: 15px
-                    font-style: normal
-                    font-weight: 700
-                    line-height: normal
+                background-color:#99E2D0     
         .menu__order
             display: flex
             justify-content: center
@@ -158,23 +123,25 @@
                 margin-top: 40px
                 margin-bottom: 40px
                 cursor: pointer
-
-@media (max-width: 767.98px) 
+@media (max-width: 768px) 
     header
         display: flex
         align-items: center
         justify-content: center
         padding: 14px 89px 13px 17px
         gap: 42px
+        @media (min-width: 768px) 
+            padding: 30px 0px 31 0px
+            align-self: stretch
+            position: relative
+            height: 96px
+            box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25)
         i
             font-size: 30px
         .header__logo 
-            width: 162px
-            height: 44px
-            padding: 0px 19px 0px 16px
-            justify-content: center
-            align-items: center
-            flex-shrink: 0
+            font-family: "Shrikhand", "cursive"
+            margin: 0
+            text-align: center
     .bg-img
         height: 275px
     img
@@ -199,27 +166,6 @@
                 line-height: normal
             i
                 font-size: 21px
-            /*.heart__icon
-                position: relative
-                display: flex
-                justify-content: center
-                align-items: center
-                margin-right: 16px
-                &--empty
-                    position: absolute
-                    color: black
-                &--full
-                    position: absolute
-                    opacity: 0
-                    background: linear-gradient(#FF79DA, #9356DC)
-                    background-clip: text
-                    -webkit-background-clip: text
-                    color: transparent
-                    transition: all 400ms
-                &:hover &--full
-                    opacity: 1
-                &:hover &--empty
-                    opacity: 0*/
         .menu__section
             padding: 0 13px 40px 13px
             h3
@@ -241,38 +187,6 @@
                 width: 40px
                 height: 3px
                 background-color:#99E2D0
-        .menu__card
-            border-radius: 15.043px
-            background: #FFF
-            box-shadow: 0px 4.011494159698486px 15.043103218078613px 0px rgba(0, 0, 0, 0.10)
-            padding: 15px
-            margin-bottom: 12px
-            h4
-                overflow: hidden
-                color: #000
-                text-overflow: ellipsis
-                whitespace: nowrap
-                font-size: 18px
-                font-style: normal
-                font-weight: 500
-                line-height: normal
-            .menu__price
-                display: flex
-                align-items: center
-                justify-content: space-between
-                h4
-                    color: #000
-                    font-size: 15px
-                    font-style: normal
-                    font-weight: 300
-                    line-height: normal
-                p
-                    color: #353535
-                    text-align: center
-                    font-size: 15px
-                    font-style: normal
-                    font-weight: 700
-                    line-height: normal
         .menu__order
             display: flex
             justify-content: center

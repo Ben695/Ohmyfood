@@ -25,7 +25,6 @@
         animation: spin 3s linear 
         position: absolute
         border-radius: 50%
-
 @keyframes spin 
     from 
         transform: rotate(0deg)
@@ -34,60 +33,8 @@
         transform: rotate(360deg)
 /* Desktop version*/
 @media (min-width: 767.98px) 
-    header
-        padding: 1rem 1rem
-        box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25)
-        position: relative
-        z-index: 1000
-    .header__logo
-        font-family: "Shrikhand", "cursive"
-        margin: 0
-        text-align: center
-    .city
-        display: flex
-        height: 50px
-        justify-content: center
-        align-items: center
-        gap: 17px
-        align-self: stretch
-        background: #EAEAEA
-        p
-            color: #353535
-            font-size: 16px
-            font-style: normal
-            font-weight: 500
-            line-height: normal
-    .book
-        display: flex
-        flex-direction: column
-        align-items: center
-        background:#F6F6F6
-        gap: 18px
-        padding-top: 30px
-        padding-bottom: 30px
-        h1
-            color: #000
-            text-align: center
-            font-size: 40px
-            font-style: normal
-            font-weight: 700
-            line-height: normal
-            padding-bottom: 18px
-        h2
-            color: #353535
-            text-align: center
-            font-size: 18px
-            font-style: normal
-            font-weight: 300
-            line-height: normal
-            padding-bottom: 18px
     .working
-        display: flex
-        padding: 50px 180px
-        flex-direction: column
-        align-items: flex-start
-        gap: 25px
-        align-self: stretch
+        
         .working__center-btn
             display: flex
             align-items: flex-start
@@ -172,151 +119,155 @@
                     top: 30%
                     font-size: 25px
                     right: 8%
-/*Mobile version*/
-@media (max-width: 767.98px) 
-    .city
-        display: flex
-        height: 50px
-        justify-content: center
-        align-items: center
-        gap: 17px
+header
+    display: flex
+    padding: 14px 89px 13px 89px
+    justify-content: center
+    align-items: center
+    flex-shrink: 0
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25)
+    @media (min-width: 768px)
+        padding: 1rem 1rem
+        position: relative
+        z-index: 1000
+.header__logo 
+    font-family: "Shrikhand", "cursive"
+    margin: 0
+    text-align: center
+.city
+    display: flex
+    height: 50px
+    justify-content: center
+    align-items: center
+    gap: 17px
+    flex-shrink: 0
+    background: #EAEAEA
+    @media (min-width: 768px) 
+    align-self: stretch
+    svg
+        width: 12px
+        height: 16px
         flex-shrink: 0
-        background: var(--grey-2, #EAEAEA)
-        svg
-            width: 12px
-            height: 16px
-            flex-shrink: 0
-        p
-            color: var(--grey, #353535)
-            font-size: 16px
-            font-style: normal
-            font-weight: 500
-            line-height: normal
-    .book
-        background: $grey
-        h1
-            color: #000
-            text-align: center
-            font-size: 24px
-            font-style: normal
-            font-weight: 700
-            line-height: normal
-            padding: 39px 58px 0px 42px
-            height: 68px
-        h2
-            color: var(--grey, #353535)
-            text-align: center
-            font-size: 18px
-            font-style: normal
-            font-weight: 300
-            line-height: normal
-            padding-bottom: 27px
-        .book__center-btn
-            display: flex
-            justify-content: center
-            padding-bottom: 70px
-            .btn-primary
-            height: 50px
-            flex-shrink: 0
-            margin: 13px 18px 13px 18px
-    .working
-        margin-bottom: 68px
-        h2
-            padding: 48px 80px 26px 20px
-            color: #000
-            font-size: 24px
-            font-style: normal
-            font-weight: 700
-            line-height: normal
-    .working__number
-        --number-radius:24px
-        color: #FFF
+    p
+        color: #353535
+        font-size: 16px
+        font-weight: 500
+.book
+    color: #353535
+    font-size: 16px
+    font-weight: 500
+    h1
+        color: #000
+        text-align: center
+        font-size: 24px
+        font-weight: 700
+        padding: 39px 58px 0px 42px
+        height: 68px
+    h2
+        color: #353535
+        text-align: center
+        font-size: 18px
+        font-weight: 300
+        padding-bottom: 27px
+    .book__center-btn
+        display: flex
+        justify-content: center
+        padding-bottom: 70px
+        .btn-primary
+        height: 50px
+        flex-shrink: 0
+        margin: 13px 18px 13px 18px
+.working
+    margin-bottom: 68px
+    @media (min-width: 768px) 
+        display: flex
+        padding: 50px 180px
+        flex-direction: column
+        align-items: flex-start
+        gap: 25px
+        align-self: stretch
+    h2
+        padding: 48px 80px 26px 20px
+        color: #000
+        font-size: 24px
+        font-style: normal
+        font-weight: 700
+        line-height: normal
+.working__number
+    --number-radius:24px
+    color: #FFF
+    font-size: 14px
+    font-style: normal
+    font-weight: 500
+    line-height: normal
+    width: var(--number-radius)
+    height: var(--number-radius)
+    background-color: $purple
+    border-radius: 50%
+    display: flex
+    align-items: center
+    justify-content: center
+    position: absolute
+    left: calc( var(--number-radius) / -2 )
+    
+.working__center-btn
+    display: flex
+    justify-content: center
+    flex-direction: column
+    gap: 24px
+    padding-left: 32px
+    padding-right: 20px
+.restaurants
+    background: $grey
+    padding-bottom: 66px
+    h2
+        padding: 54px 80px 0 20px
+        color: #000
+        font-size: 24px
+        font-style: normal
+        font-weight: 700
+        line-height: normal
+        padding-bottom: 20px
+.restaurants__list
+    grid-template-columns: repeat(1, 1fr)
+    column-gap: 2rem
+    row-gap: 2rem
+    display: grid
+    padding-left: 17px
+    padding-right: 18px
+a
+    text-decoration: none
+.restaurants__card
+    border-radius: 15px
+    background: #FFF
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10)
+    position: relative
+    cursor: pointer
+    text-decoration: none
+    .restaurants__btn-new
+        border-radius: 2px
+        background: #99E2D0
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15)
+        color: #008766
+        text-align: center
         font-size: 14px
         font-style: normal
         font-weight: 500
         line-height: normal
-        width: var(--number-radius)
-        height: var(--number-radius)
-        background-color: $purple
-        border-radius: 50%
-        display: flex
-        align-items: center
-        justify-content: center
         position: absolute
-        left: calc( var(--number-radius) / -2 )
-        
-    .working__center-btn
-        display: flex
-        justify-content: center
-        flex-direction: column
-        gap: 24px
-        padding-left: 32px
-        padding-right: 20px
-    .restaurants
-        background: $grey
-        padding-bottom: 66px
-        h2
-            padding: 54px 80px 0 20px
-            color: #000
-            font-size: 24px
-            font-style: normal
-            font-weight: 700
-            line-height: normal
-            padding-bottom: 20px
-    .restaurants__list
-        grid-template-columns: repeat(1, 1fr)
-        column-gap: 2rem
-        row-gap: 2rem
-        display: grid
-        padding-left: 17px
-        padding-right: 18px
-    a
-        text-decoration: none
-    .restaurants__card
-        border-radius: 15px
-        background: #FFF
-        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10)
-        position: relative
-        cursor: pointer
-        text-decoration: none
-        .restaurants__btn-new
-            border-radius: 2px
-            background: #99E2D0
-            box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15)
-            color: #008766
-            text-align: center
-            font-size: 14px
-            font-style: normal
-            font-weight: 500
-            line-height: normal
-            position: absolute
-            top: 5%
-            right: 5%
-            border: #99E2D0
-            padding: 7px 9px 7px 9px
-        img
-            height: 200px
-            object-fit: cover
-            border-radius: 15px 15px 0 0
-    .restaurants__card__txt
-        padding: 16px 0 12px 13px
-        position: relative
-        i
-            position: absolute
-            top: 30%
-            font-size: 25px
-            right: 8%
-    header
-        display: flex
-        padding: 14px 89px 13px 89px
-        justify-content: center
-        align-items: center
-        flex-shrink: 0
-    .header__logo 
-        display: flex
-        width: 162px
-        height: 44px
-        padding: 0px 19px 0px 16px
-        justify-content: center
-        align-items: center
-        flex-shrink: 0
+        top: 5%
+        right: 5%
+        border: #99E2D0
+        padding: 7px 9px 7px 9px
+    img
+        height: 200px
+        object-fit: cover
+        border-radius: 15px 15px 0 0
+.restaurants__card__txt
+    padding: 16px 0 12px 13px
+    position: relative
+    i
+        position: absolute
+        top: 30%
+        font-size: 25px
+        right: 8%

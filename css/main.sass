@@ -1,9 +1,8 @@
 @import ./_variables
-
 /*font*/
 * 
   font-family: "Roboto", sans-serif
-
+/*Reset CSS*/
 h1,h2,h3,h4,h5,h6,p
   margin-top: 0
   margin-bottom: 0
@@ -21,12 +20,7 @@ body
     position: absolute
 html 
   scroll-behavior: smooth
-
-
-/* MIXIN*/
-@mixin card-shadow 
-  box-shadow: 0px 4.011494159698486px 15.043103218078613px 0px rgba(0, 0, 0, 0.1)
-
+/* CSS start here*/
 .menu__btn
   background-color: transparent
   border: none
@@ -45,8 +39,6 @@ html
     &:active
       fill: url(#bg__like)
       stroke: url(#bg__like)
-
-/* button*/
 .btn-primary
   border-radius: 25px
   background: var(--button-gradient, linear-gradient(175deg, #9356DC 0%, #FF79DA 100%))
@@ -54,9 +46,7 @@ html
   color: var(--white, #FFF)
   text-align: center
   font-size: 16px
-  font-style: normal
   font-weight: 500
-  line-height: normal
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25)
   padding: 13px 18px 13px 18px
 .btn-secondary
@@ -66,20 +56,19 @@ html
   height: 72.379px
   color: #000
   font-size: 16px
-  font-style: normal
   font-weight: 500
-  line-height: normal
   border: #F6F6F6
-  width: 322.486px
-  height: 72.379px
+  width: 322px
+  height: 72px
   padding-left: 33px
   display: flex
   align-items: center
   gap: 27px
   position: relative
-@media (min-width: 768px) 
-  footer
-    background: #353535
+footer
+  background: #353535
+  padding: 22px 25px 22px 25px
+  @media (min-width: 768px) 
     display: flex
     padding: 30px 25px
     align-items: center
@@ -87,52 +76,23 @@ html
     gap: 16px
     flex-shrink: 0
     flex-direction: row-reverse
-    h3
-      color: #FFF
-      font-family: Shrikhand
-      font-size: 18px
-      font-style: normal
-      font-weight: 400
-      line-height: normal
-    .footer__menu
-      gap: 7px
+  h3
+    color: #FFF
+    font-family: Shrikhand
+    font-size: 18px
+    font-weight: 400
+    padding-bottom: 16px
+  .footer__menu
+    gap: 7px
+    @media (min-width: 768px) 
       display: flex
-    .footer__icon
-      display: flex
-      align-items: center
-      gap: 10px
-    p
-      color: #FFF
-      font-size: 16px
-      font-style: normal
-      font-weight: 500
-      line-height: normal
-      padding-right: 8px
-      cursor: pointer
-/* CSS START HERE */
-@media (max-width: 767.98px) 
-  footer
-    background: #353535
-    padding: 22px 25px 22px 25px
-    h3
-      color: #FFF
-      font-family: Shrikhand
-      font-size: 18px
-      font-style: normal
-      font-weight: 400
-      line-height: normal
-      padding-bottom: 16px
-    .footer__menu
-      gap: 7px
-    .footer__icon
-      display: flex
-      align-items: center
-      gap: 10px
-    p
-      color: #FFF
-      font-size: 16px
-      font-style: normal
-      font-weight: 500
-      line-height: normal
-      padding-right: 8px
-      cursor: pointer
+  .footer__icon
+    display: flex
+    align-items: center
+    gap: 10px
+  p
+    color: #FFF
+    font-size: 16px
+    font-weight: 500
+    padding-right: 8px
+    cursor: pointer
