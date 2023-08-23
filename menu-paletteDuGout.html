@@ -14,19 +14,29 @@
 </head>
 <header>
     <a href="index.html"><i class="fa-solid fa-arrow-left" style="color: #353535;"></i></a>
-    <img class="header__logo" src="images/logo/ohmyfood.png" alt="">
+    <h1 class="header__logo">ohmyfood</h1>
 </header>
 <body>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <defs>
+            <linearGradient id="bg__like" x1="12" y1="0" x2="12" y2="24" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#9356DC"/>
+            <stop offset="1" stop-color="#FF79DA"/>
+            </linearGradient>
+        </defs>
+    </svg>
     <section class="bg-img">
         <img class="bg-img" src="/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
     </section>
     <section class="menu">
         <div class="menu__title">
             <h1>La palette du goût</h1>
-            <div class="heart__icon">
-                <i class="fa-regular fa-heart fa-2x heart__icon--empty"></i>
-                <i class="fa-solid fa-heart fa-2x heart__icon--full"></i>
-            </div>
+            <button class="menu__btn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <title>like</title>
+                    <path d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z" />
+                </svg>
+            </button>
         </div>
         <div class="menu__section">
             <h3>Entrées</h3>

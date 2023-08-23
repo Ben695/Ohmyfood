@@ -15,7 +15,10 @@ a
   &:active
     text-decoration: none 
 body 
-  margin: 0px
+  margin: 0
+  > svg
+    height: 0
+    position: absolute
 html 
   scroll-behavior: smooth
 
@@ -24,6 +27,24 @@ html
 @mixin card-shadow 
   box-shadow: 0px 4.011494159698486px 15.043103218078613px 0px rgba(0, 0, 0, 0.1)
 
+.menu__btn
+  background-color: transparent
+  border: none
+  padding: 0
+  font: inherit
+  cursor: pointer
+  position: absolute
+  top: 22%
+  right: 5%
+  svg
+    fill: white
+    stroke: black
+    stroke-width: 1px
+    width: 22px
+    height: 22px
+    &:active
+      fill: url(#bg__like)
+      stroke: url(#bg__like)
 
 /* button*/
 .btn-primary
@@ -87,6 +108,7 @@ html
       font-weight: 500
       line-height: normal
       padding-right: 8px
+      cursor: pointer
 /* CSS START HERE */
 @media (max-width: 767.98px) 
   footer
@@ -113,3 +135,4 @@ html
       font-weight: 500
       line-height: normal
       padding-right: 8px
+      cursor: pointer
