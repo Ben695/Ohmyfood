@@ -47,159 +47,103 @@
         height: 100%
         border-radius: 0 15px 15px 0
         overflow: hidden
-/* Desktop version*/
-@media (min-width: 768px) 
-    header
-        a
-            position: absolute
+header
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 1rem 1rem
+    gap: 42px
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25)
+    @media (min-width: 768px) 
+        padding: 1rem 1rem
+        align-self: stretch
+        position: relative
+        box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25)
+    a
+        position: absolute
+        top: 3%
+        left: 6%
+        @media (min-width: 768px) 
             top: 35%
             left: 2%
-        .header__logo
-    .bg-img
-        img
-            width: 100%
-            height: 50vh
-            object-fit: cover
-    .menu
-        background-color:#F6F6F6
-        position: relative
-        margin-top: -40px
-        border-radius: 7% 7% 0 0
+    i
+        font-size: 30px
+    .header__logo 
+        font-family: "Shrikhand", "cursive"
+        margin: 0
+        text-align: center
+.bg-img
+    height: 275px
+    @media (min-width: 768px) 
+        width: 100%
+        height: 50vh
+        object-fit: cover
+img
+    height: 275px
+    width: 100%
+.menu
+    background-color:#F6F6F6
+    position: relative
+    margin-top: -40px
+    border-radius: 7% 7% 0 0
+    @media (min-width: 768px)
         margin-left: 192px
         margin-right: 193px
-        .menu__title
-            padding-top: 51px
-            display: flex
-            align-items: center
-            justify-content: center
-            h1
-                color: #101010
-                font-family: Shrikhand
-                font-size: 28px
-                font-style: normal
-                font-weight: 400
-                line-height: normal
-            i
-                font-size: 21px
-        .menu__section
-            padding-left: 210px
-            padding-right: 211px
-            h3
-                color: #000
-                font-family: Roboto
-                font-size: 16px
-                font-style: normal
-                font-weight: 300
-                line-height: normal
-                text-transform: uppercase
-                padding-bottom: 8px
-                margin-bottom: 12px
-                position: relative
-                padding-top: 40px
-            h3:after
-                content: ""
-                position: absolute
-                bottom: 0
-                left: 0
-                width: 40px
-                height: 3px
-                background-color:#99E2D0     
-        .menu__order
-            display: flex
-            justify-content: center
-            padding-bottom: 40px
-            .btn-order
-                border-radius: 25px
-                background: var(--button-gradient, linear-gradient(175deg, #9356DC 0%, #FF79DA 100%))
-                border: var(--button-gradient, linear-gradient(175deg, #9356DC 0%, #FF79DA 100%))
-                box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25)
-                color:  #FFF
-                text-align: center
-                font-size: 16px
-                font-style: normal
-                font-weight: 500
-                line-height: normal
-                padding: 16px 48px 15px 49px
-                margin-top: 40px
-                margin-bottom: 40px
-                cursor: pointer
-@media (max-width: 768px) 
-    header
+    .menu__title
+        padding: 32px 17px 40px 17px
         display: flex
         align-items: center
         justify-content: center
-        padding: 14px 89px 13px 17px
-        gap: 42px
-        @media (min-width: 768px) 
-            padding: 30px 0px 31 0px
-            align-self: stretch
-            position: relative
-            height: 96px
-            box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25)
-        i
-            font-size: 30px
-        .header__logo 
-            font-family: "Shrikhand", "cursive"
-            margin: 0
-            text-align: center
-    .bg-img
-        height: 275px
-    img
-        height: 275px
-        width: 100%
-    .menu
-        background-color:#F6F6F6
-        position: relative
-        margin-top: -40px
-        border-radius: 7% 7% 0 0
-        .menu__title
-            padding: 32px 17px 40px 17px
-            display: flex
-            align-items: center
-            justify-content: space-around
-            h1
-                color: #101010
-                font-family: Shrikhand
-                font-size: 28px
-                font-style: normal
-                font-weight: 400
-                line-height: normal
-            i
-                font-size: 21px
-        .menu__section
-            padding: 0 13px 40px 13px
-            h3
-                color: #000
-                font-family: Roboto
-                font-size: 16px
-                font-style: normal
-                font-weight: 300
-                line-height: normal
-                text-transform: uppercase
-                padding-bottom: 8px
-                margin-bottom: 12px
-                position: relative
-            h3:after
-                content: ""
-                position: absolute
-                bottom: 0
-                left: 0
-                width: 40px
-                height: 3px
-                background-color:#99E2D0
-        .menu__order
-            display: flex
+        gap: 24px
+        @media (min-width: 768px)
+            padding-top: 51px
             justify-content: center
-            padding-bottom: 40px
-            .btn-order
-                border-radius: 25px
-                background: var(--button-gradient, linear-gradient(175deg, #9356DC 0%, #FF79DA 100%))
-                border: var(--button-gradient, linear-gradient(175deg, #9356DC 0%, #FF79DA 100%))
-                box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25)
-                color:  #FFF
-                text-align: center
-                font-size: 16px
-                font-style: normal
-                font-weight: 500
-                line-height: normal
-                padding: 16px 48px 15px 49px
+        h1
+            color: #101010
+            font-family: Shrikhand
+            font-size: 28px
+            font-weight: 400
+        i
+            font-size: 21px
+    .menu__section
+        padding: 0 13px 40px 13px
+        @media (min-width: 768px)
+            padding-left: 210px
+            padding-right: 211px
+        h3
+            color: #000
+            font-family: Roboto
+            font-size: 16px
+            font-weight: 300
+            text-transform: uppercase
+            padding-bottom: 8px
+            margin-bottom: 12px
+            position: relative
+            @media (min-width: 768px)
+                padding-top: 40px
+        h3:after
+            content: ""
+            position: absolute
+            bottom: 0
+            left: 0
+            width: 40px
+            height: 3px
+            background-color:#99E2D0
+    .menu__order
+        display: flex
+        justify-content: center
+        padding-bottom: 40px
+    .btn-order
+        border-radius: 25px
+        background: var(--button-gradient, linear-gradient(175deg, #9356DC 0%, #FF79DA 100%))
+        border: var(--button-gradient, linear-gradient(175deg, #9356DC 0%, #FF79DA 100%))
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25)
+        color:  #FFF
+        text-align: center
+        font-size: 16px
+        font-weight: 500
+        padding: 16px 48px 15px 49px
+        @media (min-width: 768px)
+            margin-top: 40px
+            margin-bottom: 40px
+            cursor: pointer

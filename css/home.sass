@@ -31,97 +31,10 @@
     
     to 
         transform: rotate(360deg)
-/* Desktop version*/
-@media (min-width: 767.98px) 
-    .working
-        
-        .working__center-btn
-            display: flex
-            align-items: flex-start
-            gap: 25px
-            align-self: stretch
-    .working__number
-            --number-radius:24px
-            color: #FFF
-            font-size: 14px
-            font-style: normal
-            font-weight: 500
-            line-height: normal
-            width: var(--number-radius)
-            height: var(--number-radius)
-            background-color: $purple
-            border-radius: 50%
-            display: flex
-            align-items: center
-            justify-content: center
-            position: absolute
-            left: calc( var(--number-radius) / -2 )
-            .working__center-btn
-                display: flex
-                justify-content: center
-                flex-direction: column
-                gap: 24px
-                padding-left: 32px
-                padding-right: 20px
-    .restaurants
-            background: $grey
-            padding: 30px 180px
-            h2
-                padding: 54px 80px 0 20px
-                color: #000
-                font-size: 24px
-                font-style: normal
-                font-weight: 700
-                line-height: normal
-                padding-bottom: 20px
-            .restaurants__list
-                display: grid
-                grid-template-columns: repeat(2, 1fr)
-                column-gap: 2rem
-                row-gap: 2rem
-            a
-                text-decoration: none
-                &:hover
-                    -webkit-transform: scale(1.019)
-                    transform: scale(1.015)
-            .restaurants__card
-                border-radius: 15px
-                background: #FFF
-                box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10)
-                position: relative
-                cursor: pointer
-                text-decoration: none
-                width: 490px
-                .restaurants__btn-new
-                    border-radius: 2px
-                    background: #99E2D0
-                    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15)
-                    color: #008766
-                    text-align: center
-                    font-size: 14px
-                    font-style: normal
-                    font-weight: 500
-                    line-height: normal
-                    position: absolute
-                    top: 5%
-                    right: 5%
-                    border: #99E2D0
-                    padding: 7px 9px 7px 9px
-                img
-                    height: 200px
-                    object-fit: cover
-                    border-radius: 15px 15px 0 0
-            .restaurants__card__txt
-                padding: 16px 0 12px 13px
-                position: relative
-                i
-                    position: absolute
-                    top: 30%
-                    font-size: 25px
-                    right: 8%
+/*CSS START HERE*/       
 header
     display: flex
-    padding: 14px 89px 13px 89px
+    padding: 1rem 1rem
     justify-content: center
     align-items: center
     flex-shrink: 0
@@ -156,6 +69,7 @@ header
     color: #353535
     font-size: 16px
     font-weight: 500
+    background-color: #F6F6F6
     h1
         color: #000
         text-align: center
@@ -173,6 +87,8 @@ header
         display: flex
         justify-content: center
         padding-bottom: 70px
+        @media (min-width: 768px) 
+            padding-bottom: 30px
         .btn-primary
         height: 50px
         flex-shrink: 0
@@ -193,6 +109,8 @@ header
         font-style: normal
         font-weight: 700
         line-height: normal
+        @media (min-width: 768px) 
+            padding: 0
 .working__number
     --number-radius:24px
     color: #FFF
@@ -209,24 +127,25 @@ header
     justify-content: center
     position: absolute
     left: calc( var(--number-radius) / -2 )
-    
 .working__center-btn
     display: flex
     justify-content: center
     flex-direction: column
     gap: 24px
     padding-left: 32px
-    padding-right: 20px
+    padding-right: 20px 
+    @media (min-width: 768px)      
+        flex-direction: initial  
 .restaurants
     background: $grey
     padding-bottom: 66px
+    @media (min-width: 768px) 
+        padding: 30px 180px
     h2
         padding: 54px 80px 0 20px
         color: #000
         font-size: 24px
-        font-style: normal
         font-weight: 700
-        line-height: normal
         padding-bottom: 20px
 .restaurants__list
     grid-template-columns: repeat(1, 1fr)
@@ -235,8 +154,13 @@ header
     display: grid
     padding-left: 17px
     padding-right: 18px
+    @media (min-width: 768px) 
+        grid-template-columns: repeat(2, 1fr)
 a
     text-decoration: none
+    &:hover
+        -webkit-transform: scale(1.019)
+        transform: scale(1.015)
 .restaurants__card
     border-radius: 15px
     background: #FFF
@@ -244,6 +168,8 @@ a
     position: relative
     cursor: pointer
     text-decoration: none
+    @media (min-width: 768px) 
+        width: 490px
     .restaurants__btn-new
         border-radius: 2px
         background: #99E2D0
@@ -262,7 +188,7 @@ a
     img
         height: 200px
         object-fit: cover
-        border-radius: 15px 15px 0 0
+        border-radius: 15px 15px 0 0   
 .restaurants__card__txt
     padding: 16px 0 12px 13px
     position: relative
