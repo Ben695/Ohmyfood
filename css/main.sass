@@ -1,41 +1,54 @@
 @import ./_variables
 /*font*/
-* 
+*
   font-family: "Roboto", sans-serif
 /*Reset CSS*/
 h1,h2,h3,h4,h5,h6,p
   margin-top: 0
   margin-bottom: 0
 a
-  color: #000 
-  text-decoration: none 
+  color: #000
+  text-decoration: none
   &:hover
-    text-decoration: none 
+    text-decoration: none
   &:active
-    text-decoration: none 
-body 
+    text-decoration: none
+body
   margin: 0
   > svg
     height: 0
     position: absolute
-html 
+html
   scroll-behavior: smooth
 /* CSS start here*/
-.menu__btn
-  background-color: transparent
-  border: none
-  padding: 0
-  font: inherit
-  cursor: pointer
-  svg
-    fill: white
-    stroke: black
-    stroke-width: 1px
-    width: 22px
-    height: 22px
-    &:active
-      fill: url(#bg__like)
-      stroke: url(#bg__like)
+
+.restaurants__card__txt .heart
+  color: #101010
+  font-size: 1.6rem
+  position: absolute
+  top: 27%
+  right: 6%
+  &:hover
+    cursor: pointer
+    animation: heart 3s infinite
+    background: linear-gradient(to bottom, #ff79da, #e86edb, #cf64dc, #b35cdc, #9356dc)
+    background-clip: text
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    font-weight: bold
+
+.menu__title .heart
+  color: #101010
+  font-size: 1.6rem
+  &:hover
+    cursor: pointer
+    animation: heart 3s infinite
+    background: linear-gradient(to bottom, #ff79da, #e86edb, #cf64dc, #b35cdc, #9356dc)
+    background-clip: text
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    font-weight: bold
+
 .btn-primary
   border-radius: 25px
   background: var(--button-gradient, linear-gradient(175deg, #9356DC 0%, #FF79DA 100%))
@@ -65,7 +78,7 @@ html
 footer
   background: #353535
   padding: 22px 25px 22px 25px
-  @media (min-width: 768px) 
+  @media (min-width: 768px)
     display: flex
     padding: 30px 25px
     align-items: center
@@ -81,7 +94,7 @@ footer
     padding-bottom: 16px
   .footer__menu
     gap: 7px
-    @media (min-width: 768px) 
+    @media (min-width: 768px)
       display: flex
   .footer__icon
     display: flex
@@ -93,3 +106,54 @@ footer
     font-weight: 500
     padding-right: 8px
     cursor: pointer
+    a
+      color: #FFF
+      font-size: 16px
+      font-weight: 500
+      padding-right: 8px
+      cursor: pointer
+// Animation d'apparition pour les cartes de menu
+.menu__card
+  opacity: 0
+  transform: translateY(20px)
+  animation: fadeInCard 0.5s ease-in-out forwards
+
+// Définition de l'animation pour la classe menu__card
+@keyframes fadeInCard
+  0%
+    opacity: 0
+    transform: translateY(20px)
+  100%
+    opacity: 1
+    transform: translateY(0)
+
+// Ajout d'un décalage pour chaque carte
+.menu__card:nth-child(1)
+  animation-delay: 0s
+
+.menu__card:nth-child(2)
+  animation-delay: 0.3s
+
+.menu__card:nth-child(3)
+  animation-delay: 0.6s
+
+.menu__card:nth-child(4)
+  animation-delay: 0.9s
+
+.menu__card:nth-child(5)
+  animation-delay: 1.2s
+
+.menu__card:nth-child(6)
+  animation-delay: 1.5s
+
+.menu__card:nth-child(7)
+  animation-delay: 1.8s
+
+.menu__card:nth-child(8)
+  animation-delay: 2.1s
+
+.menu__card:nth-child(9)
+  animation-delay: 2.4s
+
+.menu__card:nth-child(10)
+  animation-delay: 2.7s
